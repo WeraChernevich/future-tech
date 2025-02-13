@@ -1,0 +1,1 @@
+[Ссылка на макет](https://www.figma.com/design/YzTDRV7OaSoeCUBNYaoCZV/FutureTech?node-id=18-214&p=f&t=7tAHCUf7CwRZ8ER4-0)
