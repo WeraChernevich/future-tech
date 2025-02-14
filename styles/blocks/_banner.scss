@@ -84,7 +84,6 @@
         }
 
         @include tablet {
-            width: 100vw;
             margin-left: calc(var(--container-padding-x) * -1);
             padding: rem(100) rem(40) rem(40);
             background: linear-gradient(to bottom right, rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0)),
@@ -98,7 +97,6 @@
         border-block: var(--border);
 
         &-list {
-
             @include tablet-above {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -119,7 +117,7 @@
                 &:not(:first-child) {
                     padding-left: var(--paddingX);
                 }
-    
+
                 &:not(:last-child) {
                     padding-right: var(--paddingX);
                     border-right: var(--border);

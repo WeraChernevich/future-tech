@@ -1,0 +1,63 @@
+@use "../base/helpers/index" as *;
+
+.tabs {
+    &__header {
+        border-bottom: var(--border);
+
+        @include tablet {
+            overflow-x: auto;
+        }
+    }
+
+    &__btns {
+        padding-block: fluid(50, 20);
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: rem(20);
+
+        @include laptop {
+            column-gap: rem(14);
+        }
+
+        @include tablet {
+            width: max-content;
+        }
+    }
+
+    &__btn {
+        padding: fluid(30, 18) rem(10);
+        border: var(--border);
+        border-radius: rem(8);
+        flex-wrap: wrap;
+        font-size: rem(18);
+        color: var(--color-gray-60);
+        background-color: transparent;
+
+        @include hover {
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+            box-shadow: 0 2px 4px rgba(221, 233, 61, 0.3);
+        }
+
+        @include laptop {
+            font-size: rem(14);
+        }
+
+        &.is-active {
+            color: var(--color-light);
+            font-weight: 500;
+            background-color: var(--color-dark-10);
+            pointer-events: none;
+        }
+    }
+
+    &__content {
+        &:not(.is-active) {
+            display: none;
+        }
+
+        &:focus-visible {
+            outline-offset: -1rem;
+        }
+    }
+}
