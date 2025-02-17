@@ -9,6 +9,26 @@
 
     &--2-cols {
         --columns: 2;
+        --itemPaddingX: #{rem(80)};
+
+        @include laptop {
+            --itemPaddingX: #{rem(50)};
+        }
+
+        @include mobile {
+            --columns: 1;
+        }
+
+        .bordered-grid__item {
+            &:nth-child(odd) {
+                padding-right: var(--itemPaddingX);
+                border-right: var(--border);
+            }
+
+            &:nth-child(even) {
+                padding-left: var(--itemPaddingX);
+            }
+        }
     }
 
     &--3-cols {

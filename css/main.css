@@ -1702,6 +1702,24 @@ button[aria-label]::before {
 }
 .bordered-grid--2-cols {
   --columns: 2;
+  --itemPaddingX: 5rem;
+}
+@media (width <= 90.06125rem) {
+  .bordered-grid--2-cols {
+    --itemPaddingX: 3.125rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .bordered-grid--2-cols {
+    --columns: 1;
+  }
+}
+.bordered-grid--2-cols .bordered-grid__item:nth-child(odd) {
+  padding-right: var(--itemPaddingX);
+  border-right: var(--border);
+}
+.bordered-grid--2-cols .bordered-grid__item:nth-child(even) {
+  padding-left: var(--itemPaddingX);
 }
 .bordered-grid--3-cols {
   --columns: 3;
