@@ -1271,6 +1271,9 @@ button[aria-label]::before {
 .section__body {
   border-block: var(--border);
 }
+.section__link {
+  max-width: 22.5rem;
+}
 
 .list__item:not(:last-child) {
   border-bottom: var(--border);
@@ -1709,17 +1712,34 @@ button[aria-label]::before {
     --itemPaddingX: 3.125rem;
   }
 }
+@media (width > 47.99875rem) {
+  .bordered-grid--2-cols .bordered-grid__item:nth-child(odd) {
+    padding-right: var(--itemPaddingX);
+    border-right: var(--border);
+  }
+  .bordered-grid--2-cols .bordered-grid__item:nth-child(even) {
+    position: relative;
+    padding-left: var(--itemPaddingX);
+  }
+  .bordered-grid--2-cols .bordered-grid__item:nth-child(even)::before {
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 100%;
+    bottom: 0;
+    translate: 50%;
+    width: 100vw;
+    height: 0.0625rem;
+    background-color: var(--color-dark-15);
+  }
+}
 @media (width <= 47.99875rem) {
   .bordered-grid--2-cols {
     --columns: 1;
   }
-}
-.bordered-grid--2-cols .bordered-grid__item:nth-child(odd) {
-  padding-right: var(--itemPaddingX);
-  border-right: var(--border);
-}
-.bordered-grid--2-cols .bordered-grid__item:nth-child(even) {
-  padding-left: var(--itemPaddingX);
+  .bordered-grid--2-cols .bordered-grid__item:not(:last-child) {
+    border-bottom: var(--border);
+  }
 }
 .bordered-grid--3-cols {
   --columns: 3;
@@ -1739,11 +1759,12 @@ button[aria-label]::before {
     position: relative;
   }
   .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1)::before {
+    content: "";
     position: absolute;
     left: 50%;
-    translate: -50%;
-    content: "";
+    right: auto;
     bottom: 0;
+    translate: -50%;
     width: 100vw;
     height: 0.0625rem;
     background-color: var(--color-dark-15);
@@ -2118,4 +2139,101 @@ button[aria-label]::before {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22.375rem, 1fr));
   gap: 1.875rem;
+}
+
+.video-player {
+  position: relative;
+}
+.video-player__video {
+  width: 100%;
+  height: clamp(13.125rem, 9.9068627451rem + 13.2026143791vw, 25.75rem);
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.75rem;
+}
+@media (width <= 90.06125rem) {
+  .video-player__video {
+    border-radius: 0.625rem;
+  }
+}
+.video-player__panel {
+  position: absolute;
+  inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  padding: 1.875rem;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+.video-player__panel:not(.is-active) {
+  opacity: 0;
+  visibility: hidden;
+}
+.video-player__panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(44.27%, rgba(20, 20, 20, 0)), to(#141414));
+  background-image: linear-gradient(180deg, rgba(20, 20, 20, 0) 44.27%, #141414 100%);
+}
+.video-player__panel * {
+  position: relative;
+  z-index: 1;
+}
+.video-player__play-btn {
+  --size: 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: --size;
+  height: --size;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  color: var(--color-light);
+}
+@media (any-hover: hover) {
+  .video-player__play-btn:hover {
+    color: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .video-player__play-btn:active {
+    color: var(--color-accent);
+  }
+}
+@media (width <= 90.06125rem) {
+  .video-player__play-btn {
+    --size: 3.125rem;
+  }
+}
+
+.video-card {
+  display: grid;
+  row-gap: 1.875rem;
+}
+@media (width <= 90.06125rem) {
+  .video-card {
+    row-gap: 1.25rem;
+  }
+}
+.video-card__body {
+  display: grid;
+  row-gap: clamp(0.25rem, 0.1544117647rem + 0.3921568627vw, 0.625rem);
 }/*# sourceMappingURL=main.css.map */

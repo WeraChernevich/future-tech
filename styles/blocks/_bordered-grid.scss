@@ -15,18 +15,25 @@
             --itemPaddingX: #{rem(50)};
         }
 
-        @include mobile {
-            --columns: 1;
+        @include mobile-above {
+            .bordered-grid__item {
+                &:nth-child(odd) {
+                    padding-right: var(--itemPaddingX);
+                    border-right: var(--border);
+                }
+    
+                &:nth-child(even) {
+                    @include full-vw-centered-line(bottom, auto, 100%, 50%);
+                    padding-left: var(--itemPaddingX);
+                }
+            }
         }
 
-        .bordered-grid__item {
-            &:nth-child(odd) {
-                padding-right: var(--itemPaddingX);
-                border-right: var(--border);
-            }
+        @include mobile {
+            --columns: 1;
 
-            &:nth-child(even) {
-                padding-left: var(--itemPaddingX);
+            .bordered-grid__item:not(:last-child) {
+                border-bottom: var(--border);
             }
         }
     }
@@ -48,7 +55,7 @@
                 }
 
                 &:nth-child(3n - 1) {
-                    @include full-vwcentered-line(bottom);
+                    @include full-vw-centered-line(bottom);
                 }
 
                 &:nth-child(3n - 1),
