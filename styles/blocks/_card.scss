@@ -40,6 +40,18 @@
                 justify-content: start;
             }
         }
+
+        &-icon {
+            width: fluid(80, 50);
+        }
+
+        &-info {
+            display: flex;
+            row-gap: fluid(16, 6);
+
+            
+        }
+
     }
 
     &__body {
@@ -52,15 +64,6 @@
         &-main {
             display: flex;
             row-gap: fluid(50, 24);
-        }
-
-        &-icon {
-            width: fluid(80, 50);
-        }
-
-        &-info {
-            display: flex;
-            row-gap: fluid(16, 6);
         }
     }
 
