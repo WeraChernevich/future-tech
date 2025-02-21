@@ -47,6 +47,7 @@
 
         &-info {
             display: flex;
+            flex-direction: column;
             row-gap: fluid(16, 6);
             
             &:has(.card__rating-view) {
