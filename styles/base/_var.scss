@@ -11,6 +11,7 @@
     --color-gray-60: #98989a;
     --color-accent: #ffd11a;
     --color-red: #ff5500;
+    --shadow-form: 0 0 0 #{rem(4)} #191919;
 
     --gradient: linear-gradient(var(--color-dark-10), var(--color-dark-10)) padding-box,
         linear-gradient(45deg, var(--color-dark-15) 64%, var(--color-accent) 136%) border-box;

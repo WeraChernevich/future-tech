@@ -1,0 +1,7 @@
+@use "../base/helpers/index" as *;
+
+.contacts {
+    &__header {
+        border-bottom: var(--border);
+    }
+}

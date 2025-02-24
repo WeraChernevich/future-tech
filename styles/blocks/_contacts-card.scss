@@ -1,0 +1,22 @@
+@use "../base/helpers/index" as *;
+
+.contacts-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(50, 20);
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: rem(15);
+
+        @include laptop {
+            row-gap: rem(10);
+        }
+
+        @include mobile {
+            padding-left: rem(50);
+        }
+    }
+}

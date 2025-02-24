@@ -1,0 +1,68 @@
+@use "../base/helpers/index" as *;
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: rem(16);
+    font-size: rem(18);
+    font-weight: 500;
+    color: var(--color-light);
+
+    &__body {
+        display: flex;
+        column-gap: rem(16);
+        width: 100%;
+
+        @include laptop {
+            column-gap: rem(12);
+        }
+    }
+
+    @include laptop {
+        row-gap: rem(12);
+        font-size: rem(16);
+    }
+
+    &__required-star {
+        color: var(--color-red);
+    }
+
+    &__control {
+        width: 100%;
+        height: rem(67);
+        padding-inline: rem(20);
+        color: var(--color-light);
+        background-color: var(--color-dark-10);
+        border: var(--border);
+        border-radius: rem(8);
+        border: rem(1) solid var(--color-dark-15);
+
+        &::placeholder {
+            color: var(--color-dark-40);
+        }
+
+        @include hover {
+            border-color: var(--color-accent);
+            box-shadow: var(--shadow-form);
+        }
+
+        @include laptop {
+            height: rem(53);
+            padding-inline: rem(16);
+            border-radius: rem(6);
+        }
+    }
+
+    textarea.field__control {
+        padding-block: rem(20);
+        resize: vertical;
+        min-height: rem(163);
+        padding-block: rem(16);
+
+        @include mobile {
+            min-height: rem(126);
+        }
+    }
+
+}
