@@ -512,13 +512,13 @@ button[aria-label]::before {
   }
 }
 .icon--yellow-arrow::after {
-  background-image: url("./../../images/icons/arrow-top-right_yellow.svg");
+  background-image: url("../../images/arrow-top-right_yellow.svg");
 }
 .icon--yellow-eye::after {
-  background-image: url("./../../images/icons/eye.svg");
+  background-image: url("../../images/eye.svg");
 }
 .icon--gray-arrow-down::after {
-  background-image: url("../../images/icons/arrow-gray-down.svg");
+  background-image: url("../../images/arrow-gray-down.svg");
 }
 
 .logo {
