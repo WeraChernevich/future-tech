@@ -1,6 +1,7 @@
-const MatchMedia = {
-    mobile: window.matchMedia('(width <= 767.98px)'),
-    
-}
+import pxToRem from './utils/pxToRem.js'
 
-export default MatchMedia
+const MatchMedia = {
+    mobile: window.matchMedia(`(width <= ${pxToRem(767.98)}rem)`),
+  }
+  
+  export default MatchMedia
