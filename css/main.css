@@ -674,6 +674,13 @@ button[aria-label]::before {
     padding-block: 0.875rem;
   }
 }
+@media (width <= 47.99875rem) {
+  .header__promo-link .icon {
+    -webkit-column-gap: 0.3125rem;
+       -moz-column-gap: 0.3125rem;
+            column-gap: 0.3125rem;
+  }
+}
 .header__body {
   padding-inline: 20px;
   padding-block: 1.5rem;
@@ -1219,8 +1226,8 @@ button[aria-label]::before {
   grid-area: resources-preview;
   padding-left: 5rem;
   padding-bottom: 5rem;
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(20, 20, 20, 0.5)), to(rgba(20, 20, 20, 0))), url("./../../images/banner-bg.png") 0 0/cover no-repeat;
-  background: linear-gradient(to bottom right, rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0)), url("./../../images/banner-bg.png") 0 0/cover no-repeat;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(20, 20, 20, 0.5)), to(rgba(20, 20, 20, 0))), url("../../images/banner-bg.png") 0 0/cover no-repeat;
+  background: linear-gradient(to bottom right, rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0)), url("../../images/banner-bg.png") 0 0/cover no-repeat;
 }
 @media (width <= 90.06125rem) {
   .banner__resources-preview {
@@ -1237,8 +1244,8 @@ button[aria-label]::before {
   .banner__resources-preview {
     margin-left: calc(var(--container-padding-x) * -1);
     padding: 6.25rem 2.5rem 2.5rem;
-    background: -webkit-gradient(linear, left top, right bottom, from(rgba(20, 20, 20, 0.5)), to(rgba(20, 20, 20, 0))), url("./../../images/banner-bg-small.png");
-    background: linear-gradient(to bottom right, rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0)), url("./../../images/banner-bg-small.png");
+    background: -webkit-gradient(linear, left top, right bottom, from(rgba(20, 20, 20, 0.5)), to(rgba(20, 20, 20, 0))), url("../../images/banner-bg-small.png");
+    background: linear-gradient(to bottom right, rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0)), url("../../images/banner-bg-small.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
