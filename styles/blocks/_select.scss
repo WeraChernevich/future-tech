@@ -50,7 +50,7 @@
             @include square(var(--size));
 
             content: "";
-            background: url("../../images/icons/dropdown.svg") center / contain no-repeat;
+            background: url("../../images/dropdown.svg") center / contain no-repeat;
             transition-duration: var(--transition-duration);
 
             @include laptop {

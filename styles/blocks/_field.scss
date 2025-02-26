@@ -60,6 +60,10 @@
         min-height: rem(163);
         padding-block: rem(16);
 
+        &:user-invalid {
+            border-color: var(--color-red);
+        }
+
         @include mobile {
             min-height: rem(126);
         }

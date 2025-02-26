@@ -17,10 +17,10 @@
         --size: #{rem(24)};
         @include square(var(--size));
 
-        background: url('/images/icons/star.svg') center / contain no-repeat;
+        background: url('/images/star.svg') center / contain no-repeat;
 
         &.is-active {
-            background-image: url('/images/icons/star-yellow.svg');
+            background-image: url('/images/star-yellow.svg');
         }
 
         @include laptop {
